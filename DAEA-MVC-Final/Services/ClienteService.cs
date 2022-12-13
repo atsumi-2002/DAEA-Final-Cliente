@@ -12,7 +12,7 @@ namespace DAEA_MVC_Final.Services
 {
     public class ClienteService
     {
-        public async Task<List<Cliente>> Lista()
+        public async Task<List<Cliente>> Listar()
         {
             List<Cliente> lista = new List<Cliente>();
 

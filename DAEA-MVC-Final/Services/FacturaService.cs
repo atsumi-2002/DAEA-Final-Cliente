@@ -12,7 +12,7 @@ namespace DAEA_MVC_Final.Services
 {
     public class FacturaService
     {
-        public async Task<List<Factura>> Lista()
+        public async Task<List<Factura>> Listar()
         {
             List<Factura> lista = new List<Factura>();
 

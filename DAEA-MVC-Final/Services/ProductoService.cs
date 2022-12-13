@@ -12,7 +12,7 @@ namespace DAEA_MVC_Final.Services
 {
     public class ProductoService
     {
-        public async Task<List<Producto>> Lista()
+        public async Task<List<Producto>> Listar()
         {
             List<Producto> lista = new List<Producto>();
 
