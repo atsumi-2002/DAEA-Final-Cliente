@@ -1,8 +1,36 @@
 ﻿
+@model DAEA_MVC_Final.Models.Cliente
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<div class="card">
+    <div class="card-header">
+        @ViewBag: Accion
+    </div>
+    <div class="card-body">
+        <hr />
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><b>Nombre</b></td>
+                    <td>@Model.nombre</td>
+                </tr>
+                <tr>
+                    <td><b>Apellido</b></td>
+                    <td>@Model.apellido</td>
+                </tr>
+                <tr>
+                    <td><b>Celular</b></td>
+                    <td>@Model.celular</td>
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td>@Model.email</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 

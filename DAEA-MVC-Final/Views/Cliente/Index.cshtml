@@ -1,8 +1,45 @@
 ﻿
+@model List<DAEA_MVC_Final.Models.Cliente>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
+<div class="card">
+    <div class="card-header">
+        <h2>Listado de clientes</h2>
+    </div>
+    <div class="card-body">
+        <a asp-action="Create" asp-controller="ClienteController" class="btn btn-success btn-sm">Nuevo Cliente</a>
+        <hr/>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Celular</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.ClienteID</td>
+                        <td>@item.nombre</td>
+                        <td>@item.apellido</td>
+                        <td>@item.celular</td>
+                        <td>@item.email</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="ClienteController" asp-router-id="@item.ClienteID" class="btn btn-primary btn-sm">Editar</a>
+                            <a asp-action="Delete" asp-controller="ClienteController" asp-router-id="@item.ClienteID" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
